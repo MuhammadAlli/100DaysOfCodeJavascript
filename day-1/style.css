@@ -29,6 +29,10 @@ label,
 input {
   font-size: 30px;
 }
+.fa-arrow-right-long {
+  font-size: 30px;
+  color: #fff;
+}
 #bdt {
   display: inline;
 }
