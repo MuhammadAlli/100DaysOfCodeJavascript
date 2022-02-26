@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Money Master</title>
+    <!-- CSS Link -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Fevicon -->
+    <link rel="icon" href="money-bag.png">
+</head>
+<body>
+    <main class="main">
+        <div class="main__top">
+            <h1 class="main__top__header1">Money Master</h1>
+        </div>
+        <div class="main__image-section">
+            <img src="image1.jpeg" alt="" class="main__image-section__image">
+        </div>
+        <div class="main__form-section">
+            <h2 class="main__form-section__header2">Income</h2><br>
+            <span class="main__form-section__span">Income: </span>
+            <input type="text" class="main__form-section__income" id="income"><br>
+            <h2 class="main__form-section__header2">Expenses</h2><br>
+            <span class="main__form-section__span">Food: </span>
+            <input class="main__form-section__food" type="text" id="food"><br>
+            <span class="main__form-section__span">Rent: </span>
+            <input class="main__form-section__rent" type="text" id="rent"><br>
+            <span class="main__form-section__span">Clothes: </span>
+            <input class="main__form-section__clothes" type="text" id="clothes"><br>
+            <input class="main__form-section__button" type="submit" value="Calculate" id="calculate"><br>
+            <h2 class="main__form-section__header2">Total Expenses: </h2>
+            <h2 class="main__form-section__header2" id="expenses"></h2><br>
+            <h2 class="main__form-section__header2">Balance: </h2>
+            <h2 class="main__form-section__header2" id="balance"></h2><br>
+            <span class="main__form-section__span">Save: </span>
+            <input class="main__form-section__save" type="text" id="saveText">
+            <span class="main__form-section__percent">%</span>
+            <input class="main__form-section__button" type="submit" value="Save" id="save"><br>
+            <h2 class="main__form-section__header2">Saving Amount: </h2>
+            <h2 class="main__form-section__header2" id="savingAmount"></h2><br>
+            <h2 class="main__form-section__header2">Remaining Balance: </h2>
+            <h2 class="main__form-section__header2" id="remainingBalance"></h2>
+        </div>
+    </main>
+    <!-- Script -->
+    <script src="app.js"></script>
+</body>
+</html>

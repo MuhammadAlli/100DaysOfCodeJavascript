@@ -1,0 +1,119 @@
+body {
+  margin: 0;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.main {
+  display: grid;
+  grid-template-columns: auto auto;
+  padding: 50px;
+  padding-top: 0;
+}
+.main__top {
+  grid-column: 1 / 5;
+}
+.main__top__header1 {
+  color: #800080;
+  margin: 25px;
+  text-align: center;
+  font-size: 50px;
+  width: unset;
+}
+.main__image-section {
+  grid-column: 1 / 2;
+}
+.main__image-section__image {
+  width: 90%;
+}
+.main__form-section {
+  text-align: center;
+  grid-column: 2 / 3;
+  padding: 25px;
+  width: 100%;
+}
+.main__form-section__header2 {
+  margin: 15px;
+  text-align: center;
+  display: inline;
+  margin-left: 0;
+  margin-right: 0;
+}
+.main__form-section__span {
+  width: 100px;
+  padding: 10px;
+  text-align: right;
+  margin: 10px;
+}
+.main__form-section__income,
+.main__form-section__food,
+.main__form-section__rent,
+.main__form-section__clothes {
+  width: 200px;
+  padding: 0 5px;
+  font-size: 20px;
+  margin: 5px 0;
+  background: #dcdcdc;
+  border: none;
+}
+.main__form-section__income {
+  margin-left: 5px;
+}
+.main__form-section__food {
+  margin-left: 17px;
+}
+.main__form-section__rent {
+  margin-left: 20px;
+}
+.main__form-section__save {
+  width: 100px;
+  text-align: center;
+  border: none;
+  font-size: 20px;
+  background: #dcdcdc;
+}
+.main__form-section__button {
+  color: #fff;
+  background: #800080;
+  border: none;
+  padding: 10px 25px;
+  font-size: 16px;
+  border-radius: 5px;
+  margin: 5px;
+  cursor: pointer;
+}
+/* Mobile Design */
+@media only screen and (max-width: 700px) {
+  * {
+    width: 100%;
+  }
+  .main {
+    grid-template-columns: auto;
+    padding-bottom: 0;
+  }
+  .main__image-section {
+    grid-column: 1 / 2;
+  }
+  .main__image-section__image {
+    width: 100%;
+  }
+  .main__form-section {
+    grid-column: 1 / 2;
+  }
+  .main__top__header1 {
+    font-size: 30px;
+  }
+  .main__form-section__income,
+  .main__form-section__food,
+  .main__form-section__rent,
+  .main__form-section__clothes {
+    width: 150px;
+    font-size: 16px;
+  }
+  .main__form-section__save {
+    font-size: 16px;
+  }
+}
