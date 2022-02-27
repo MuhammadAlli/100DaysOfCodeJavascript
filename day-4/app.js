@@ -23,20 +23,20 @@ function balanceCalculation (e) {
     let clothesValue = parseInt(clothes.value);
 
     if (isNaN(expenses.innerText)) {
-        alert("a2z");
+        alert("Pleas fill up the input fild with a numeric number");
     } else {
         expenses.innerText = foodValue + rentValue + clothesValue;
 
         balance.innerText = income.value - expenses.innerText;
     }
     if (incomeValue < expenses.innerText) {
-        alert("Your expenses balance is big than your income");
+        if(!alert('Your expenses balance is big than your income')){window.location.reload();}
     }
 }
 
 function saveCalculation () {
     if (savingAmount.innerText < balance) {
-        alert("What you want to save is more than your balance");
+        if(!alert('What you want to save is more than your balance')){window.location.reload();}
     } else {
         savingAmount.innerText = parseInt((income.value * saveText.value) / 100);
 
