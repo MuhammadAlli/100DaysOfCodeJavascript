@@ -12,7 +12,7 @@ let remainingBalance = document.getElementById("remainingBalance");
 
 calculate.addEventListener("click", balanceCalculation);
 
-save.addEventListener("click", saveCalculation)
+save.addEventListener("click", saveCalculation);
 
 function balanceCalculation (e) {
     e.preventDefault();
@@ -22,21 +22,46 @@ function balanceCalculation (e) {
     let rentValue = parseInt(rent.value);
     let clothesValue = parseInt(clothes.value);
 
-    if (isNaN(expenses.innerText)) {
-        alert("Pleas fill up the input fild with a numeric number");
+    if (!income.value || !food.value || !rent.value || !clothes.value) {
+        alert("Pleas fill up the input filds");
+
+        income.value = "";
+        food.value = "";
+        rent.value = "";
+        clothes.value = "";
+    } else if (isNaN(income.value) || isNaN(food.value) || isNaN(rent.value) || isNaN(clothes.value)) {
+        alert("Please give a numeric number");
+
+        income.value = "";
+        food.value = "";
+        rent.value = "";
+        clothes.value = "";
     } else {
         expenses.innerText = foodValue + rentValue + clothesValue;
 
         balance.innerText = income.value - expenses.innerText;
     }
+
     if (incomeValue < expenses.innerText) {
-        if(!alert('Your expenses balance is big than your income')){window.location.reload();}
+        alert('Your expenses balance is big than your income');
+
+        food.value = 0;
+        rent.value = 0;
+        clothes.value = 0;
     }
 }
 
 function saveCalculation () {
-    if (savingAmount.innerText < balance) {
-        if(!alert('What you want to save is more than your balance')){window.location.reload();}
+    if (savingAmount.innerText > balance) {
+        alert('What you want to save is more than your balance');
+
+        saveText.value = "";
+    } else if (balance.innerText == "" && expenses.innerText == "") {
+        alert("Your balance has not been calculated");
+
+        saveText.value = "";
+    } else if (isNaN(saveText.value)) {
+        alert("Please give a numeric number");
     } else {
         savingAmount.innerText = parseInt((income.value * saveText.value) / 100);
 
